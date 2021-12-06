@@ -1,24 +1,27 @@
 public class CalcCredit {
-    public static void main(String[] args) {
 
-    }
-    // Напишем методы заглушки для будущих методов
-
+    // Надо вычислить, написать следующие методы:
     // Рассчет месячного платежа
+    // Рассчет общей суммы к возврату в банк
+    // Рассчет переплаты за весь период
+
+    // для простоты не будем использовать сложные вычисления,
+    // а сделаем простейший расчёт ежемесячного платежа
     public double calcOfMounthlyPayment(int loanSum, double interestRate, int creditPeriod) {
-
-        return 0;
+        // Пусть такой формулой у нас расчитывается ежемесячный платёж
+        double calculation = (loanSum + loanSum * (interestRate / 100)) / creditPeriod;
+        return calculation;
     }
 
-    // метод расчёта общей суммы к возврату в банк
+    // простейший метод расчёта общей суммы к возврату в банк
     public double calcOfTotalSum(int loanSum, double interestRate){
-
-        return 0;
+        double calculation = loanSum + (loanSum * interestRate / 100);
+        return calculation;
     }
 
-    // метод расчёта переплаты за весь период
+    // простейший метод расчёта переплаты за весь период
     public double calcOfOverpayment (int loanSum, double interestRate) {
-
-        return 0;
+        double calculation = loanSum  * interestRate / 100;
+        return calculation;
     }
 }
